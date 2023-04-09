@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Page</title>
+    <style>
+        .main{
+            position: relative;
+            top: 25px;
+            left: 410px;
+            width: 550px;
+            background-color:#ffffff;
+            border-radius: 12px;
+            align-items: center;
+            padding: 5%;
+        }
+        h1{
+            color: #4f5959;
+            font-family: comic sans ms, cursive, sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        input[type=submit]{
+            background-color: #70807f;
+            font-family: comic sans ms, cursive, sans-serif;
+            border: 2px;
+            color: white;
+            padding: 8px 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        body {
+            background-image: url('{% static 'HeartDiseasePrediction/img/21-06-2019-04-1160-.jpg'%}');
+            background-repeat: no-repeat;
+            background-attachment: relative;
+            background-size: cover;
+            font-family: comic sans ms, cursive, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div align="center" class="main">
+        <h1>Please Fill Up the Following Information</h1>
+        <form action="result">
+            <table>
+                <tr>
+                    <td align="right">Age:</td>
+                    <td align="left"> <input type="text" name="n1"></td>
+                </tr>
+                <tr>
+                    <td align="right">Sex:</td>
+                    <td align="left"> <input type="text" name="n2"></td>
+                </tr>
+                <tr>
+                    <td align="right">Chest Pain Type:</td>
+                    <td align="left"> <input type="text" name="n3"></td>
+                </tr>
+                <tr>
+                    <td align="right">Resting Blood Pressure (in mm/Hg):</td>
+                    <td align="left"> <input type="text" name="n4"></td>
+                </tr>
+                <tr>
+                    <td align="right">Cholesterol Levels (in mg/dl):</td>
+                    <td align="left"> <input type="text" name="n5"></td>
+                </tr>
+                <tr>
+                    <td align="right">Fasting Blood Sugar:</td>
+                    <td align="left"> <input type="text" name="n6"></td>
+                </tr>
+                <tr>
+                    <td align="right">Resting Electrocardiographic:</td>
+                    <td align="left"> <input type="text" name="n7"></td>
+                </tr>
+                <tr>
+                    <td align="right">Maximum Heart Rate Achieved:</td>
+                    <td align="left"> <input type="text" name="n8"></td>
+                </tr>
+                <tr>
+                    <td align="right">Exercise Induced Angina:</td>
+                    <td align="left"> <input type="text" name="n9"></td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit">
+        </form>
+        <br>
+        Result:{{result2}}
+    </div>
+</body>
+</html>
